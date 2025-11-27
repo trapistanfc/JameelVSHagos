@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMEEL vs HAGOS | THE SHOWDOWN | DEC 20</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-video"></div>
+    <div class="scanlines"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="event-header">
+            <span class="live-badge">LIVE EVENT</span>
+            <span class="event-date">DECEMBER 20, 2024 • PARAMOUNT SPORTSPLEX</span>
+        </div>
+    </header>
+
+    <!-- Main Event Section -->
+    <main>
+        <section class="hero">
+            <!-- Event Branding -->
+            <div class="event-branding">
+                <h3 class="presents">BASKETBALL SUPREMACY PRESENTS</h3>
+                <h1 class="main-title">THE SHOWDOWN</h1>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Fighter Cards -->
+            <div class="versus-container">
+                <div class="fighter-card left-fighter">
+                    <div class="fighter-image-wrapper">
+                        <img src="images/jameel.jpg" alt="Jameel Durham" class="fighter-image">
+                        <div class="fighter-overlay"></div>
+                    </div>
+                    <div class="fighter-info">
+                        <h2 class="fighter-name">JAMEEL</h2>
+                        <h2 class="fighter-lastname">DURHAM</h2>
+                        <p class="fighter-title">D1 FIU GUARD</p>
+                        <div class="stats">
+                            <span class="stat-item">6'3"</span>
+                            <span class="stat-divider">|</span>
+                            <span class="stat-item">MIAMI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vs-element">
+                    <span class="vs-text">VS</span>
+                    <div class="vs-line"></div>
+                </div>
+
+                <div class="fighter-card right-fighter">
+                    <div class="fighter-image-wrapper">
+                        <img src="images/hagos.jpg" alt="Mohammed Hagos" class="fighter-image">
+                        <div class="fighter-overlay"></div>
+                    </div>
+                    <div class="fighter-info">
+                        <h2 class="fighter-name">MOHAMMED</h2>
+                        <h2 class="fighter-lastname">HAGOS</h2>
+                        <p class="fighter-title">ERITREA CAPTAIN</p>
+                        <div class="stats">
+                            <span class="stat-item">6'1"</span>
+                            <span class="stat-divider">|</span>
+                            <span class="stat-item">INTERNATIONAL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <h3 class="countdown-title">GAME TIME IN</h3>
+                <div id="countdown" class="countdown">
+                    <div class="time-unit">
+                        <div class="time-value" id="days">00</div>
+                        <div class="time-label">DAYS</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-value" id="hours">00</div>
+                        <div class="time-label">HOURS</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-value" id="minutes">00</div>
+                        <div class="time-label">MINS</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <div class="time-value" id="seconds">00</div>
+                        <div class="time-label">SECS</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Betting Poll Section -->
+            <div class="betting-section">
+                <h2 class="section-title">PLACE YOUR BETS</h2>
+                <div class="betting-container">
+                    <div class="bet-option" onclick="placeBet('jameel')">
+                        <h3>JAMEEL</h3>
+                        <div class="bet-percentage" id="jameel-percent">50%</div>
+                        <div class="bet-bar">
+                            <div class="bet-fill jameel-fill" id="jameel-bar"></div>
+                        </div>
+                        <button class="bet-button">VOTE JAMEEL</button>
+                    </div>
+
+                    <div class="total-votes">
+                        <span id="total-votes">0</span>
+                        <span>TOTAL VOTES</span>
+                    </div>
+
+                    <div class="bet-option" onclick="placeBet('hagos')">
+                        <h3>HAGOS</h3>
+                        <div class="bet-percentage" id="hagos-percent">50%</div>
+                        <div class="bet-bar">
+                            <div class="bet-fill hagos-fill" id="hagos-bar"></div>
+                        </div>
+                        <button class="bet-button">VOTE HAGOS</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Undercard Section -->
+            <div class="undercard-section">
+                <h2 class="section-title">UNDERCARD BATTLES</h2>
+                <div class="undercard-matches">
+                    <div class="undercard-match">
+                        <span class="undercard-fighter">HAMZAH</span>
+                        <span class="undercard-vs">VS</span>
+                        <span class="undercard-fighter">TALHA</span>
+                    </div>
+                    <div class="undercard-match">
+                        <span class="undercard-fighter">SHAWIE</span>
+                        <span class="undercard-vs">VS</span>
+                        <span class="undercard-fighter">SURIYAN</span>
+                    </div>
+                    <div class="undercard-match">
+                        <span class="undercard-fighter">MOOSA</span>
+                        <span class="undercard-vs">VS</span>
+                        <span class="undercard-fighter">HARRIS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Montage Section (Optional) -->
+            <div class="training-section" id="training-section">
+                <h2 class="section-title">TRAINING FOOTAGE</h2>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <h3>JAMEEL DURHAM</h3>
+                        <video controls class="training-video">
+                            <source src="videos/jameel-training.mov" type="video/quicktime">
+                            <source src="videos/jameel-training.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-wrapper">
+                        <h3>MOHAMMED HAGOS</h3>
+                        <video controls class="training-video">
+                            <source src="videos/hagos-training.mov" type="video/quicktime">
+                            <source src="videos/hagos-training.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venue Info -->
+            <div class="venue-section">
+                <h3 class="venue-title">PARAMOUNT SPORTSPLEX</h3>
+                <p class="venue-address">6969 Millcreek Dr, Mississauga, ON</p>
+                <div class="ticket-info">
+                    <span class="doors-open">DOORS: 6:00 PM</span>
+                    <span class="main-event">MAIN EVENT: 7:00 PM</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 THE SHOWDOWN. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
